@@ -1,6 +1,6 @@
 
 export const Config = {
-  url: 'http://192.168.10.105:8080', //54.255.249.122
+  url: 'http://54.255.249.122:8080', //54.255.249.122
   gaId: 'UA-103585003-1',
   countryCode: 'http://ip-api.com/json',
   oneSignalId: '8a13c6fc-fa4a-4158-8938-b281c2832756',
