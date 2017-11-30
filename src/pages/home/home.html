@@ -1,14 +1,38 @@
-<ion-header>
+<ion-header >
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Loi Hoang</ion-title>
   </ion-navbar>
 </ion-header>
+<ion-content class="no-scroll">
+  <ion-list *ngIf="!isOpenCall">
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+    <ion-item class="input-name">
+      <ion-label fixed>Your Name</ion-label>
+      <ion-input type="text" value="" class="padding" [(ngModel)]="user.name"></ion-input>
+      <button ion-button clear item-end>Update</button>
+    </ion-item>
+
+    <ion-item *ngFor="let item of users; let i = index; trackBy: index">
+      <ion-thumbnail item-start>
+        <img src="/assets/imgs/default.jpg" *ngIf="!item.avatar">
+        <img [src]="item.avatar" *ngIf="item.avatar">
+      </ion-thumbnail>
+      <h2>{{item.name}}</h2>
+      <button ion-button clear item-end (click)="startCallUser(item)"><ion-icon name="videocam" style="font-size: 30px"></ion-icon></button>
+    </ion-item>
+
+  </ion-list>
+  <div *ngIf="isOpenCall">
+
+    <h3>Local Stream</h3>
+    <video [src]="localStream.src | safe:'url'" autoplay muted style="height: 100px; width: auto"></video>
+    <div *ngIf="remoteStream">
+      <h3>Remote Stream</h3>
+      <video [src]="remoteStream.src | safe:'url'" autoplay muted style="height: 100px; width: auto"></video>
+    </div>
+
+    <button ion-button color="danger" (click)="closeCallUser()">Stop</button>
+
+  </div>
 </ion-content>
+
