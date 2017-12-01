@@ -19,8 +19,28 @@ export class HomePage {
 
   users = [];
   user = {
-    _id: ''
-  };
+    "_id": "5a09b1d1dd596b5a0fa82adb",
+    "updatedAt": "2017-12-01T03:36:55.443Z",
+    "createdAt": "2017-11-13T14:53:05.637Z",
+    "countryCode": 84,
+    "phone": "+841638678364",
+    "provider": "local",
+    "__v": 0,
+    "avatar": "http://54.255.249.122:8080/uploads/file-1510584965173.jpeg",
+    "pushToken": "fcfc6b2adf34c88f77d0eb1943066014f00cda16b5fdaa93b64c522605e90a3e",
+    "userPush": "b54a7b3d-e00b-455b-a471-d9407100b71a",
+    "online": false,
+    "socketId": "7ju6qaJnYiP8C1PNAAB2",
+    "lastConnection": "2017-12-01T03:36:55.442Z",
+    "color": "#6568B1",
+    "hideInfo": false,
+    "notification": true,
+    "block": [],
+    "active": true,
+    "contacts": [],
+    "role": "user",
+    "name": "Loi Hoang"
+  }
   receiveUser = {
     _id: ''
   };
@@ -33,10 +53,11 @@ export class HomePage {
   isOpenCall = false;
 
   constructor(platform: Platform, public http: Http, private storage: Storage, public alertCtrl: AlertController, private _ngZone: NgZone) {
-    this.storage.get('user').then((user) => {
-      this.user = user;
-      console.log(this.user)
-    });
+    // this.storage.get('user').then((user) => {
+    //   this.user = user;
+    //   console.log(this.user)
+    // });
+    console.log(this.user)
     this.platform = platform;
     this.http.get(Config.url + Config.api.user).map(res => res.json())
       .subscribe(response => {

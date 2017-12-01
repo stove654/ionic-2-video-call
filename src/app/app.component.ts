@@ -27,44 +27,21 @@ export class MyApp {
     });
 
     if (!platform.is('ios') && !platform.is('android')) {
-      // const user = {
-      //   _id: "5a09b1d1dd596b5a0fa82adb",
-      //   active: true,
-      //   avatar: "http://54.255.249.122:8080/uploads/file-1510584965173.jpeg",
-      //   color: "#6568B1",
-      //   countryCode: 84,
-      //   createdAt: "2017-11-13T14:53:05.637Z",
-      //   hideInfo: false,
-      //   lastConnection: "2017-11-29T02:17:10.733Z",
-      //   name: "Loi Hoang",
-      //   notification: true,
-      //   online: false,
-      //   phone: "+841638678364",
-      //   provider: "local",
-      //   pushToken: "fcfc6b2adf34c88f77d0eb1943066014f00cda16b5fdaa93b64c522605e90a3e",
-      //   role: "user",
-      //   socketId: "fDBCJLegEsJgc9MyAAAt",
-      //   updatedAt: "2017-11-29T02:17:10.734Z",
-      //   userPush: "b54a7b3d-e00b-455b-a471-d9407100b71a"
-      // }
-      //
-      // const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YTA5YjFkMWRkNTk2YjVhMGZhODJhZGIiLCJpYXQiOjE1MTIwMjI3NTMsImV4cCI6MTUxMjU0ODM1M30.EzkiW7hl8fgYWqApNQxeYkXTZNonuFaXP1evV6WVT-s'
-      const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OWYxNTY4ZjAzZjQ5MzkxMmUxYmIwMjIiLCJpYXQiOjE1MTIwNTAxMTcsImV4cCI6MTUxMjU3NTcxN30.hOoFnwvnPy87zFvl8W7G_hLext3hwv0G0seK43wzAOc'
       const user = {
-        "_id": "59f1568f03f493912e1bb022",
-        "updatedAt": "2017-11-29T17:56:46.218Z",
-        "createdAt": "2017-10-26T03:29:19.340Z",
+        "_id": "5a09b1d1dd596b5a0fa82adb",
+        "updatedAt": "2017-12-01T03:36:55.443Z",
+        "createdAt": "2017-11-13T14:53:05.637Z",
         "countryCode": 84,
         "phone": "+841638678364",
         "provider": "local",
         "__v": 0,
-        "online": false,
-        "socketId": "YnOH6fELK_Bi7dKNAAGT",
-        "avatar": "http://192.168.1.76:8080/uploads/file-1511335145127.jpeg",
+        "avatar": "http://54.255.249.122:8080/uploads/file-1510584965173.jpeg",
         "pushToken": "fcfc6b2adf34c88f77d0eb1943066014f00cda16b5fdaa93b64c522605e90a3e",
         "userPush": "b54a7b3d-e00b-455b-a471-d9407100b71a",
-        "lastConnection": "2017-11-29T17:56:46.217Z",
-        "color": "#32ABB3",
+        "online": false,
+        "socketId": "7ju6qaJnYiP8C1PNAAB2",
+        "lastConnection": "2017-12-01T03:36:55.442Z",
+        "color": "#6568B1",
         "hideInfo": false,
         "notification": true,
         "block": [],
@@ -73,6 +50,32 @@ export class MyApp {
         "role": "user",
         "name": "Loi Hoang"
       }
+
+      const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YTA5YjFkMWRkNTk2YjVhMGZhODJhZGIiLCJpYXQiOjE1MTIwMjI3NTMsImV4cCI6MTUxMjU0ODM1M30.EzkiW7hl8fgYWqApNQxeYkXTZNonuFaXP1evV6WVT-s'
+      // const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OWYxNTY4ZjAzZjQ5MzkxMmUxYmIwMjIiLCJpYXQiOjE1MTIwNTAxMTcsImV4cCI6MTUxMjU3NTcxN30.hOoFnwvnPy87zFvl8W7G_hLext3hwv0G0seK43wzAOc'
+      // const user = {
+      //   "_id": "59f1568f03f493912e1bb022",
+      //   "updatedAt": "2017-11-29T17:56:46.218Z",
+      //   "createdAt": "2017-10-26T03:29:19.340Z",
+      //   "countryCode": 84,
+      //   "phone": "+841638678364",
+      //   "provider": "local",
+      //   "__v": 0,
+      //   "online": false,
+      //   "socketId": "YnOH6fELK_Bi7dKNAAGT",
+      //   "avatar": "http://192.168.1.76:8080/uploads/file-1511335145127.jpeg",
+      //   "pushToken": "fcfc6b2adf34c88f77d0eb1943066014f00cda16b5fdaa93b64c522605e90a3e",
+      //   "userPush": "b54a7b3d-e00b-455b-a471-d9407100b71a",
+      //   "lastConnection": "2017-11-29T17:56:46.217Z",
+      //   "color": "#32ABB3",
+      //   "hideInfo": false,
+      //   "notification": true,
+      //   "block": [],
+      //   "active": true,
+      //   "contacts": [],
+      //   "role": "user",
+      //   "name": "Loi Hoang"
+      // }
       this.storage.set('user', user)
       this.storage.set('token', token)
     }
